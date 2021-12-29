@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Subscribe</title>
+        <link rel="stylesheet" href="sub.css" />
+    </head>
+    <body class="box">
+        <!--Background-->
+        <div class="hero">
+            <p class="title">Subscribers tool</p>
+            <form class="form" id="myForm" method="POST">
+                SUPI-Min &nbsp<input type="text" name="min" id="min" value="0" /> SUPI-Max &nbsp<input type="text" name="tabs" id="max" value="10" />
+                <button class="SB">Subscribe</button>
+            </form>
+            <form class="form" id="mydelete" method="DELETE">
+                Delete-Min &nbsp<input type="text" name="Rmin" id="Rmin" value="0" /> Delete-Max &nbsp<input
+                    type="text"
+                    name="Rmax"
+                    id="Rmax"
+                    value="10"
+                />
+                <button class="DB">Delete</button>
+            </form>
+            <button class="config_btn" id="config_btn">Configuration</button>
+            <div class="config_container" id="config_container">
+                <form class="form" id="ConfigForm">
+                    PlmnID &nbsp<input type="text" class="container" id="PlmnID" value="20893" /><br />
+                    <!-- ueId &nbsp<input type="text" class="container" id="ueId" value="imsi-208930000000000" /><br /> -->
+                    authenticationMethod &nbsp<input type="text" class="container" id="authenticationMethod" value="5G_AKA" /><br />
+                    permanentKeyValue &nbsp<input
+                        type="text"
+                        class="container"
+                        id="permanentKeyValue"
+                        value="8baf473f2f8fd09487cccbd7097c6862"
+                    /><br />
+                    sequenceNumber &nbsp<input type="text" class="container" id="sequenceNumber" value="16f3b3f70fc2" /><br />
+                    opValue &nbsp<input type="text" class="container" id="opValue" value="8e27b6af0e692e750f32667a3b14605d" /><br />
+                    opcValue &nbsp<input type="text" class="container" id="opcValue" value="" placeholder="null" /><br />
+                    <button class="Done_btn">Done</button>
+                </form>
+            </div>
+        </div>
+        <script src="sub.js"></script>
+    </body>
+</html>
