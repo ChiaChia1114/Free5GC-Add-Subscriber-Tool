@@ -21,17 +21,12 @@ Subscriber Tool can add multiple subscribers into your free5gc MongoDB. You can 
 
 ## Configuration
 
-There has one think you need to do is change the `url` in the `sub.js`. Please follow the tutorial to change your config.
+There has one think you need to do is change the `url` in the Configuration. Please follow the tutorial to change your config.
 
 - Replace your free5gc ip address.
-**sub.js**
-```javascript=39
-var url = "http://<free5gc ip>:5000/api/subscriber/" + subscriber[min].toString() + "/20893"; //Replace your free5gc ip address.
-```
-```javascript=93
-var url = "http://<free5gc ip>:5000/api/subscriber/" + subscriber[min].toString() + "/20893"; //Replace your free5gc ip address.
-```
->**NOTE**：If you want to config other topic like OP value, KeyValue, PlmnID...etc. Please change in Config in `sub.js`. Or if don't know how to change it, please contact me directly.
+![image](https://user-images.githubusercontent.com/73049165/148173734-7fc02be2-f6cf-4022-9719-020cda4a22d3.png)
+
+>**NOTE**：If you want to config other topic like OP value, KeyValue, PlmnID...etc. Please open the Config with the button below and config it directly.
 
 ## Usage
 - Running your Free5GC webconsole.
@@ -54,7 +49,7 @@ var url = "http://<free5gc ip>:5000/api/subscriber/" + subscriber[min].toString(
 - connect your gNB to your Free5GC. 
 
 #### Setting your free5gc_ue config.
-- Change the ueId from `imsi-208930000000000`
+- Change the ueId from `imsi-208930000000000` or the begining of your creating subscribers.
 - Type the command below to run multiple UE.
 
 Sample：
