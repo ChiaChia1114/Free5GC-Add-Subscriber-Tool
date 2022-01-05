@@ -14,6 +14,7 @@ myForm.addEventListener("submit", function (e) {
     let min = document.getElementById("min").value;
     let max = document.getElementById("max").value;
 
+    let IPaddress = document.getElementById("URL").value;
     let PlmnID = document.getElementById("PlmnID").value;
     let authenticationMethod = document.getElementById("authenticationMethod").value;
     let permanentKeyValue = document.getElementById("permanentKeyValue").value;
@@ -49,7 +50,7 @@ myForm.addEventListener("submit", function (e) {
         }
         console.log(subscriber[min]);
         var Config = SettingConfig(subscriber[min], PlmnID, authenticationMethod, permanentKeyValue, sequenceNumber, opValue, opcValue);
-        var url = "http://192.168.56.101:5000/api/subscriber/" + subscriber[min].toString() + "/" + PlmnID.toString(); //Replace your free5gc ip address.
+        var url = "http://" + IPaddress.toString() + ":5000/api/subscriber/" + subscriber[min].toString() + "/" + PlmnID.toString(); //Replace your free5gc ip address.
 
         fetch(url, {
             method: "POST",
@@ -76,6 +77,7 @@ mydelete.addEventListener("submit", function (e) {
     let min = document.getElementById("Rmin").value;
     let max = document.getElementById("Rmax").value;
 
+    let IPaddress = document.getElementById("URL").value;
     let PlmnID = document.getElementById("PlmnID").value;
 
     var subscriber = [];
@@ -105,7 +107,7 @@ mydelete.addEventListener("submit", function (e) {
             subscriber[min] = "imsi-" + PlmnID.toString() + min.toString();
         }
         console.log(subscriber[min]);
-        var url = "http://192.168.56.101:5000/api/subscriber/" + subscriber[min].toString() + "/" + PlmnID.toString(); //Replace your free5gc ip address.
+        var url = "http://" + IPaddress.toString() + ":5000/api/subscriber/" + subscriber[min].toString() + "/" + PlmnID.toString(); //Replace your free5gc ip address.
 
         fetch(url, {
             method: "DELETE",
